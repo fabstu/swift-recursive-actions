@@ -47,9 +47,8 @@ public let nestedReducer = Reducer<
         return .none
         
     case let .indent(direction):
-        print("Calling indent")
-        state.indent(direction: direction)
-        
+        //FIXME: Crashes on access to .children.
+        state.parent?.children
         return .none
     }
 }
