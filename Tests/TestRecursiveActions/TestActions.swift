@@ -20,7 +20,7 @@ class TestItemState: XCTestCase {
             environment: AppEnvironment()
         )
         
-//        store.send(.child(id: uid2, action: .indent(direction: .right))) // Fails.
-        store.send(.indent(direction: .right)) // Works.
+        store.send(.child(id: uid2, action: .indent(direction: .right))) // Fails.
+//        store.send(.indent(direction: .right)) // Works.
     }
 }
