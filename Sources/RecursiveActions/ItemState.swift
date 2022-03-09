@@ -1,10 +1,3 @@
-    //
-    //  ItemViewModel.swift
-    //  DiaryEverything
-    //
-    //  Created by Fabian Sturm on 14.02.22.
-    //
-
 import Combine
 import ComposableArchitecture
 import SwiftUI

@@ -1,25 +1,9 @@
-//
-//  TestItemViewModel.swift
-//
-//
-//  Created by Fabian Sturm on 09.03.22.
-//
-
 import XCTest
 import ComposableArchitecture
 import SwiftUI
 import RecursiveActions
 
 class TestItemState: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-    
     func testActionsIndent() throws {
         let parentUID = UUID()
         let uid1 = UUID()
@@ -36,7 +20,7 @@ class TestItemState: XCTestCase {
             environment: AppEnvironment()
         )
         
-        store.send(.child(id: uid2, action: .indent(direction: .right)))
-//        store.send(AppAction.item(id: parentUID, action: .indent(direction: .right)))
+        store.send(.child(id: uid2, action: .indent(direction: .right))) // Fails.
+        store.send(.indent(direction: .right)) // Works.
     }
 }
